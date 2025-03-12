@@ -27,6 +27,8 @@
 #include "AT24C02.h"
 #include "stdio.h"
 #include "oled.h"
+#include "as608.h"
+#include "matrx_key.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,19 +92,30 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_USART1_UART_Init();
-		OLED_Init();
-	OLED_ColorTurn(0);//0正常显示，1 反色显示
-	OLED_DisplayTurn(0);//0正常显示 1 屏幕翻转显示
-	OLED_Clear();
+  MX_USART2_UART_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-	//if(at24_init())
-	//{
-	//	printf("ok\r\n");
-	//}
-	 OLED_ShowString(1,1,(uint8_t*)"lai le laodi",8,1);
-OLED_Refresh();
+	
+	if(at24_init())
+	{
+		printf("ok\r\n");
+	}
+
+
+
+//	
+//	 if(as608_init()==0)
+//	 {
+//			printf("yes\r\n");
+//	 }
+//	 else
+//	 {
+//				printf("no\r\n");
+//	 }
+//	 OLED_ShowString(1,1,(uint8_t*)"lai le laodi",8,1);
+//OLED_Refresh();
   /* USER CODE END 2 */
-  
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -110,6 +123,13 @@ OLED_Refresh();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		scanMatrix();
+		if(key_state[0][0]==1)
+		{
+			  key_state[0][0]=0;
+					printf("hello\r\n");
+		}
+		HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }

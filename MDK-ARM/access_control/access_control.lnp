@@ -24,6 +24,8 @@
 "access_control\system_stm32f1xx.o"
 "access_control\at24c02.o"
 "access_control\oled.o"
+"access_control\as608.o"
+"access_control\matrx_key.o"
 --library_type=microlib --strict --scatter "access_control\access_control.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

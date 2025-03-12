@@ -534,6 +534,26 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\oled.c</FilePath>
             </File>
+            <File>
+              <FileName>as608.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\as608.c</FilePath>
+            </File>
+            <File>
+              <FileName>as608.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\as608.h</FilePath>
+            </File>
+            <File>
+              <FileName>matrx_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\matrx_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>matrx_key.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\matrx_key.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

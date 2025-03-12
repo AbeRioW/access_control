@@ -33,3 +33,6 @@ access_control\main.o: ../Core/Inc/gpio.h
 access_control\main.o: ../BSP/AT24C02.h
 access_control\main.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
 access_control\main.o: ../BSP/oled.h
+access_control\main.o: ../BSP/as608.h
+access_control\main.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\string.h
+access_control\main.o: ../BSP/matrx_key.h
