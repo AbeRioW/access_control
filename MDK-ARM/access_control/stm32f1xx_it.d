@@ -29,6 +29,3 @@ access_control\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal
 access_control\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 access_control\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
 access_control\stm32f1xx_it.o: ../BSP/as608.h
-access_control\stm32f1xx_it.o: ../Core/Inc/usart.h
-access_control\stm32f1xx_it.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\string.h
-access_control\stm32f1xx_it.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h

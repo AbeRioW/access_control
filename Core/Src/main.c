@@ -95,25 +95,38 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
+	OLED_Init();
 	
-	if(at24_init())
+	if (HAL_UART_Receive_IT(&huart3, (uint8_t *)aRxBuffer, RXBUFFERSIZE) != HAL_OK)//接收中断打开,空闲中断打开
+  {
+   
+  }
+	  __HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE); //使能空闲中断
+	
+	OLED_ShowString( 30,0,(uint8_t*)"Welcome",16,1);	
+	OLED_Refresh();
+	
+	if(!at24_init())
 	{
-		printf("ok\r\n");
+			OLED_ShowString( 0,20,(uint8_t*)"AT24 dismissed",16,1);	
+			OLED_Refresh();
+		  while(1);
 	}
 
+	
+	while(GZ_HandShake(&AS608Addr))//与AS608模块握手
+	{
 
+		  OLED_ShowString( 20,20,(uint8_t*)"Waiting ...",16,1);	
+			OLED_Refresh();
+		  printf("waiting..\r\n");
+			HAL_Delay(1000);//等待1秒	
 
-//	
-//	 if(as608_init()==0)
-//	 {
-//			printf("yes\r\n");
-//	 }
-//	 else
-//	 {
-//				printf("no\r\n");
-//	 }
-//	 OLED_ShowString(1,1,(uint8_t*)"lai le laodi",8,1);
-//OLED_Refresh();
+	}
+
+	HAL_Delay(1000);//等待1秒	
+  OLED_Clear();		
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -1,5 +1,5 @@
 access_control\as608.o: ..\BSP\as608.c
-access_control\as608.o: ..\BSP\as608.h
+access_control\as608.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\string.h
 access_control\as608.o: ../Core/Inc/main.h
 access_control\as608.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 access_control\as608.o: ../Core/Inc/stm32f1xx_hal_conf.h
@@ -28,6 +28,5 @@ access_control\as608.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_
 access_control\as608.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 access_control\as608.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 access_control\as608.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+access_control\as608.o: ..\BSP\AS608.h
 access_control\as608.o: ../Core/Inc/usart.h
-access_control\as608.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\string.h
-access_control\as608.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
