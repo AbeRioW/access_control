@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../BSP</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../BSP;..\UI</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -553,6 +553,51 @@
               <FileName>matrx_key.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\BSP\matrx_key.h</FilePath>
+            </File>
+            <File>
+              <FileName>bobao.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\bobao.c</FilePath>
+            </File>
+            <File>
+              <FileName>bobao.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\bobao.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UI</GroupName>
+          <Files>
+            <File>
+              <FileName>ui_home.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UI\ui_home.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_home.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\UI\ui_home.h</FilePath>
+            </File>
+            <File>
+              <FileName>ui_pin.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UI\ui_pin.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_pin.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\UI\ui_pin.h</FilePath>
+            </File>
+            <File>
+              <FileName>ui_setting.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UI\ui_setting.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_setting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\UI\ui_setting.h</FilePath>
             </File>
           </Files>
         </Group>

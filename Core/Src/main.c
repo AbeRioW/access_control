@@ -29,6 +29,9 @@
 #include "oled.h"
 #include "as608.h"
 #include "matrx_key.h"
+#include "ui_home.h"
+#include "ui_pin.h"
+#include "bobao.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,6 +73,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	 uint8_t data[6];
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -103,8 +107,14 @@ int main(void)
   }
 	  __HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE); //使能空闲中断
 	
-	OLED_ShowString( 30,0,(uint8_t*)"Welcome",16,1);	
-	OLED_Refresh();
+//	  HAL_GPIO_WritePin(GPIOA,LAY_Pin, GPIO_PIN_SET);  //上电继电器是关闭的
+//		HAL_Delay(100);
+	
+		  HAL_GPIO_WritePin(GPIOA,LAY_Pin, GPIO_PIN_RESET);  //上电继电器是关闭的
+		HAL_Delay(100);
+	
+		OLED_ShowString( 30,0,(uint8_t*)"Welcome",16,1);	
+		OLED_Refresh();
 	
 	if(!at24_init())
 	{
@@ -126,7 +136,8 @@ int main(void)
 
 	HAL_Delay(1000);//等待1秒	
   OLED_Clear();		
-
+  printf("go\r\n");
+	GZ_Empty();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -136,13 +147,15 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		scanMatrix();
-		if(key_state[0][0]==1)
-		{
-			  key_state[0][0]=0;
-					printf("hello\r\n");
-		}
-		HAL_Delay(10);
+		
+		ui_home();
+//		scanMatrix();
+//		if(key_state[0][0]==1)
+//		{
+//			  key_state[0][0]=0;
+//					printf("hello\r\n");
+//		}
+//		HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }

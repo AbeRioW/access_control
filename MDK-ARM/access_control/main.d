@@ -35,3 +35,8 @@ access_control\main.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
 access_control\main.o: ../BSP/oled.h
 access_control\main.o: ../BSP/as608.h
 access_control\main.o: ../BSP/matrx_key.h
+access_control\main.o: ..\UI\ui_home.h
+access_control\main.o: D:\programFiles\KEIL5\ARM\ARMCC\Bin\..\include\string.h
+access_control\main.o: ..\UI\ui_pin.h
+access_control\main.o: ..\UI\ui_setting.h
+access_control\main.o: ../BSP/bobao.h

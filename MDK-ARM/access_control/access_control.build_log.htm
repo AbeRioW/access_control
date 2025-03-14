@@ -22,21 +22,29 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\dell\Desktop\0313\access_control\MDK-ARM\access_control.uvprojx
-Project File Date:  03/13/2025
+Project File Date:  03/14/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\programFiles\KEIL5\ARM\ARMCC\Bin'
 Build target 'access_control'
-compiling main.c...
+compiling ui_setting.c...
 ../BSP/oled.h(44): warning:  #1-D: last line of file ends without a newline
   #endif
-../BSP/matrx_key.h(13): warning:  #1-D: last line of file ends without a newline
+../BSP/matrx_key.h(15): warning:  #1-D: last line of file ends without a newline
    
-../Core/Src/main.c: 2 warnings, 0 errors
+..\UI\ui_pin.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\UI\ui_setting.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\UI\ui_setting.c(182): warning:  #177-D: variable "ID"  was declared but never referenced
+  	uint16_t ID;
+..\UI\ui_setting.c(365): warning:  #1-D: last line of file ends without a newline
+  }
+..\UI\ui_setting.c: 6 warnings, 0 errors
 linking...
-Program Size: Code=8796 RO-data=8008 RW-data=28 ZI-data=2996  
+Program Size: Code=14684 RO-data=8008 RW-data=88 ZI-data=2976  
 FromELF: creating hex file...
-"access_control\access_control.axf" - 0 Error(s), 2 Warning(s).
+"access_control\access_control.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 

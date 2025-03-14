@@ -9,5 +9,7 @@ extern uint8_t key_state[4][4];
 
 void scanMatrix(void);
 
+uint8_t MatrixKey(void);
+
 #endif
  

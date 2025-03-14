@@ -6,6 +6,8 @@
 uint32_t AS608Addr = 0XFFFFFFFF; //默认
 extern uint8_t aRxBuffer[RXBUFFERSIZE];
 
+
+uint16_t ValidN;//模块内有效模板个数
 //串口发送一个字节
 static void Com_SendData(uint8_t data)
 {

@@ -13,6 +13,7 @@ extern uint32_t AS608Addr;//模块地址
 
 extern uint8_t aRxBuffer[RXBUFFERSIZE];//接收缓冲
 extern uint8_t RX_len;//接收字节计数
+extern uint16_t ValidN;//模块内有效模板个数
 
 typedef struct  
 {

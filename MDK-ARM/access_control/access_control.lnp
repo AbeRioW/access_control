@@ -26,6 +26,10 @@
 "access_control\oled.o"
 "access_control\as608.o"
 "access_control\matrx_key.o"
+"access_control\bobao.o"
+"access_control\ui_home.o"
+"access_control\ui_pin.o"
+"access_control\ui_setting.o"
 --library_type=microlib --strict --scatter "access_control\access_control.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
